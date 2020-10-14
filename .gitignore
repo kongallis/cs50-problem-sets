@@ -1,5 +1,2 @@
-# Ignore
-/mario_1/
-
-# Allow
-!/mario_1/mario.c
+# Ignore all out files
+*.out
