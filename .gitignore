@@ -1,0 +1,5 @@
+# Ignore
+/mario1
+
+# Allow
+!/mario1/mario.c
