@@ -1,5 +1,5 @@
 # Ignore
-/mario1/
+/mario_1/
 
 # Allow
-!/mario1/mario.c
+!/mario_1/mario.c
