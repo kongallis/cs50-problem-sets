@@ -6,10 +6,10 @@ int main()
     int numberOfLines;
     printf("Enter a number between 1 and 8: ");
     scanf("%d", &numberOfLines);
-    printf("Number of lines = %d \n", numberOfLines);
 
-    if (numberOfLines >= 1 || numberOfLines <= 8)
+    if (numberOfLines >= 1 && numberOfLines <= 8)
     {
+        printf("Number of lines = %d \n", numberOfLines);
 
         if (numberOfLines == 1)
         {
@@ -49,7 +49,7 @@ int main()
     }
     else
     {
-        printf("Incorrect input.");
+        printf("Incorrect input.\n");
         main();
     }
 
