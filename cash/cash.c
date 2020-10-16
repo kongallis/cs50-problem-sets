@@ -9,7 +9,7 @@ int main()
     printf("How much change is owed? \n");
     scanf("%lf", &changeOwned);
     //Check if the number is negative
-    if (changeOwned >= 0)
+    if (changeOwned >= 0.01)
     {
 
         //Convert owned change from dollars to cents
@@ -29,7 +29,7 @@ int main()
     }
     else
     {
-        printf("Invalid input.\nPlease enter a non-negative number.");
+        printf("Invalid input.\nPlease enter a valid number.");
         main();
     }
 
