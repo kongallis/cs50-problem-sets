@@ -17,7 +17,7 @@ int main(void)
 
 void calcReadability(string text)
 {
-    //Number of words -> spaces + 1
+
     int wordsNumber = 0;
     int lettersNumber = 0;
     int sentencesNumber = 0;
@@ -35,7 +35,7 @@ void calcReadability(string text)
         }
         else if (text[i] == ';' || text[i] == '\'' || text[i] == '-' || text[i] == '"' || text[i] == ',' || text[i] == ':')
         {
-            printf("FOUND YOU!\n");
+            printf("Irrelevant character found\n");
         }
         else
         {
@@ -43,4 +43,6 @@ void calcReadability(string text)
         }
     }
     printf("%d letter(s)\n", lettersNumber);
+    //Number of words -> spaces + 1
+    printf("%d word(s)\n", wordsNumber + 1);
 }
