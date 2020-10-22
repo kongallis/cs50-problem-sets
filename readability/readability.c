@@ -45,4 +45,5 @@ void calcReadability(string text)
     printf("%d letter(s)\n", lettersNumber);
     //Number of words -> spaces + 1
     printf("%d word(s)\n", wordsNumber + 1);
+    printf("%d sentence(s)\n", sentencesNumber);
 }
