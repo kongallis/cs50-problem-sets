@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <cs50.h>
 #include <string.h>
+#include <stdlib.h>
 
 int main(int argc, char *argv[]) {
 
@@ -19,11 +20,11 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    int cipherKey =
-    // 26 letters
-    if (argv[1] > 26) {
+    int cipherKey = atoi(argv[1]) % 26;
 
-    }
+    printf("Cipher Key = %d\n", cipherKey);
+
+    // 26 letters
     // k = cipher key
 
     // Without command line args OR with more than 1 command arg
