@@ -3,6 +3,8 @@
 #include <string.h>
 #include <stdlib.h>
 
+string calcCipherText(string text,int cipherKey);
+
 int main(int argc, char *argv[]) {
 
     printf("Argument number %d\n", argc);
@@ -22,15 +24,59 @@ int main(int argc, char *argv[]) {
 
     int cipherKey = atoi(argv[1]) % 26;
 
-    printf("Cipher Key = %d\n", cipherKey);
+    // printf("Cipher Key = %d\n", cipherKey);
 
-    // 26 letters
-    // k = cipher key
+   string text = get_string("plaintext: ");
+   string cipherText = calcCipherText(text,cipherKey);
+   printf("ciphertext: %s\n", cipherText);
 
-    // Without command line args OR with more than 1 command arg
+
+
 
 
 
 
     return 0;
 }
+
+
+string calcCipherText(string text, int cipherKey) {
+
+    // char plainText[strlen(text)] = text;
+    for (int i = 0; i < strlen(text); i++){
+        char character = text[i];
+        // lowercase
+       if ( character >= 97 && character <= 122){
+             /// character + cipherkey => 130
+             // orio einai 122 prepei => 97 + 8
+
+             int result = character + cipherKey;
+             result = result % 122;
+
+             if (result < 97)
+             {
+                 result += 96;
+             }
+             text[i] = result;
+       }
+       // uppercase
+       else if ( character >= 65 && character <= 90  ){
+             int result = character + cipherKey;
+             result = result % 90;
+
+             if (result < 65)
+             {
+                 result += 64;
+             }
+             text[i] = result;
+       }
+    }
+    printf("%s",text);
+    return text;
+}
+
+
+// gramma --> noumero + cipherKey >
+
+// 65-90
+// 97 - 122
